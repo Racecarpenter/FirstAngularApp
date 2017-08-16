@@ -6,4 +6,9 @@
 
     <span class="fruits" *ngFor="let fruit of fruitArray"><img src={{fruit}}></span>
   </h1>
+  <div>
+    <h2>{{str}}</h2>
+    <input #newLetter type="text" (keyup.enter)="replaceLetter(newLetter.value)">
+    <button (click)="replaceLetter(newLetter.value)">Replace</button>
+  </div>
 </div>

@@ -16,4 +16,11 @@ export class AppComponent {
     this.fruit = 'https://cdn0.iconfinder.com/data/icons/fruits/128/'+newFruit+'.png';
     this.fruitArray.unshift(this.fruit);
   }
+  str = 'Mississippi River';
+  replaceLetter(newLetter: string) {
+    const re = new RegExp(newLetter, 'gi');
+    let stringy = '';
+    stringy = this.str.replace(re, '');
+    this.str = stringy;
+  }
 }
