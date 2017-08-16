@@ -6,5 +6,14 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'app';
+  fruit = '';
+  fruitArray = ['https://cdn0.iconfinder.com/data/icons/fruits/128/Banana.png','https://cdn0.iconfinder.com/data/icons/fruits/128/Apple.png', 'https://cdn0.iconfinder.com/data/icons/fruits/128/Mango.png'];
+
+
+  addFruitPic(newFruit: string) {
+    console.log('new fruit: ', this.fruit)
+    console.log('fruitArray: ', this.fruitArray)
+    this.fruit = 'https://cdn0.iconfinder.com/data/icons/fruits/128/'+newFruit+'.png';
+    this.fruitArray.unshift(this.fruit);
+  }
 }
